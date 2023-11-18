@@ -3,7 +3,7 @@ import { throttle } from "./problem8";
 describe("throttle", () => {
   jest.useFakeTimers();
 
-  test("должна позволять вызывать функцию не чаще, чем один раз в указанный промежуток времени", () => {
+  test("Должна позволять вызывать функцию не чаще, чем один раз в указанный промежуток времени", () => {
     const func = jest.fn();
     const throttledFunc = throttle(func, 500);
 
@@ -22,7 +22,7 @@ describe("throttle", () => {
     expect(func).toHaveBeenCalledTimes(2); // Теперь функция должна быть вызвана второй раз
   });
 
-  test("должна передать контекст вызова и аргументы throttled-функции в оригинальную функцию", () => {
+  test("Должна передать контекст вызова и аргументы throttled-функции в оригинальную функцию", () => {
     const func = jest.fn();
     const throttledFunc = throttle(func, 500);
     const context = { value: 42 };

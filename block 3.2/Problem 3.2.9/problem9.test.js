@@ -3,7 +3,7 @@ import { debounce } from "./problem9";
 jest.useFakeTimers();
 
 describe("debounce", () => {
-  test("должна блокировать вызовы функции в течение времени задержки, пока функция вызывается снова ранее, чем прошло время задержки", () => {
+  test("Должна блокировать вызовы функции в течение времени задержки, пока функция вызывается снова ранее, чем прошло время задержки", () => {
     const func = jest.fn();
     const debouncedFunc = debounce(func, 200);
 
@@ -23,7 +23,7 @@ describe("debounce", () => {
     expect(func).toHaveBeenCalledTimes(1); // функция должна быть вызвана один раз
   });
 
-  test("должна передать контекст вызова и аргументы debounced-функции в оригинальную функцию", () => {
+  test("Должна передать контекст вызова и аргументы debounced-функции в оригинальную функцию", () => {
     const func = jest.fn();
     const debouncedFunc = debounce(func, 200);
     const context = { a: 1 };

@@ -49,7 +49,7 @@ describe("languages statistic", () => {
     },
   ];
 
-  test("должна считать только актуальные отзывы", () => {
+  test("Должна считать только актуальные отзывы", () => {
     const result = getLanguagesStatistic(data);
     const languages = Object.keys(result);
     expect(languages.length).toBe(2);
@@ -58,24 +58,24 @@ describe("languages statistic", () => {
     expect(result).not.toHaveProperty("Ruby");
   });
 
-  test("должна правильно подсчитывать языки", () => {
+  test("Должна правильно подсчитывать языки", () => {
     const result = getLanguagesStatistic(data);
     expect(result["C"]).toBe(1);
     expect(result["JavaScript"]).toBe(2);
   });
 
-  test("должна возвращать пустой объект, если нет актуальных отзывов", () => {
+  test("Должна возвращать пустой объект, если нет актуальных отзывов", () => {
     const noReviews = data.map((review) => ({ ...review, year: 2018 }));
     const result = getLanguagesStatistic(noReviews);
     expect(result).toEqual({});
   });
 
-  test("должна корректно обрабатывать пустой массив", () => {
+  test("Должна корректно обрабатывать пустой массив", () => {
     const result = getLanguagesStatistic([]);
     expect(result).toEqual({});
   });
 
-  test("должна игнорировать отзывы без указания языка", () => {
+  test("Должна игнорировать отзывы без указания языка", () => {
     const invalidData = [
       ...data,
       {

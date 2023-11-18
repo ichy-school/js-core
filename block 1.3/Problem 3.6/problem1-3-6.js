@@ -1,14 +1,14 @@
 const inRange = (a, b) => {
-  //Код пишем тут
+  // Пиши код здесь
 };
 
 const inArray = (arr) => {
-  //Код пишем тут
+  // Пиши код здесь
 };
 
 const notInArray = (arr) => {
-  //Код пишем тут
+  // Пиши код здесь
 };
 
 export { inArray, inRange, notInArray };
-//Для запуска теста вводим в терминале команду: npm run test:current -- problem1-3-6.test.js
+// Для запуска теста вводим в терминале команду: npm run test:current -- problem1-3-6.test.js

@@ -1,7 +1,7 @@
 import { promisesInSeries } from "./problem7";
 
 describe("promisesInSeries", () => {
-  test("должна вызывать функции в правильной последовательности", async () => {
+  test("Должна вызывать функции в правильной последовательности", async () => {
     // Используем флаги для отслеживания порядка выполнения
     let firstCalled = false;
     let secondCalled = false;
@@ -40,7 +40,7 @@ describe("promisesInSeries", () => {
     expect(thirdPromise).toHaveBeenCalled();
   });
 
-  test("должна возвращать Promise<undefined> на вызов без параметров", async () => {
+  test("Должна возвращать Promise<undefined> на вызов без параметров", async () => {
     // Вызываем функцию без параметров и проверяем результат
     await expect(promisesInSeries([])).resolves.toBeUndefined();
   });

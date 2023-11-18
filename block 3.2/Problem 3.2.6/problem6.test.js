@@ -6,7 +6,7 @@ describe("increaseSalaryAsyncAwait", () => {
     expect(promise).toBeInstanceOf(Promise);
   });
 
-  test("должна корректно увеличивать ЗП всем сотрудникам и отправлять бюджет", async () => {
+  test("Должна корректно увеличивать ЗП всем сотрудникам и отправлять бюджет", async () => {
     const originalEmployees = [...api._employees];
     const notificationsSpy = jest.spyOn(api, "notifyEmployee");
     const salarySpy = jest.spyOn(api, "setEmployeeSalary");
@@ -26,7 +26,7 @@ describe("increaseSalaryAsyncAwait", () => {
     jest.restoreAllMocks();
   });
 
-  test("должна отправлять уведомление сотрудникам", async () => {
+  test("Должна отправлять уведомление сотрудникам", async () => {
     const notificationsSpy = jest
       .spyOn(api, "notifyEmployee")
       .mockResolvedValue(true);

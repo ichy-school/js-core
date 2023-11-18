@@ -1,13 +1,13 @@
 import { createUsernames } from "./problem1-4-2";
 
 describe("createUsernames", () => {
-  it("должна возвращать массив", () => {
+  it("Должна возвращать массив", () => {
     const data = [];
     const result = createUsernames(data);
     expect(Array.isArray(result)).toBe(true);
   });
 
-  it("должна создавать username для всех пользователей", () => {
+  it("Должна создавать username для всех пользователей", () => {
     const data = [
       { firstName: "John", lastName: "D.", age: 28 },
       { firstName: "Jane", lastName: "D.", age: 32 },
@@ -17,7 +17,7 @@ describe("createUsernames", () => {
     expect(result[1]).toHaveProperty("username");
   });
 
-  it("должна создавать правильные username", () => {
+  it("Должна создавать правильные username", () => {
     const currentYear = new Date().getFullYear();
     const data = [
       { firstName: "John", lastName: "D.", age: 28 },

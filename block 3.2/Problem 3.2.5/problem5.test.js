@@ -1,7 +1,7 @@
 import { promiseAll } from "./problem5";
 
 describe("promiseAll", () => {
-  test("должна возвращать массив результатов с результатами в правильном порядке", async () => {
+  test("Должна возвращать массив результатов с результатами в правильном порядке", async () => {
     const firstPromise = new Promise((resolve) =>
       setTimeout(() => resolve(300), 300)
     );
@@ -20,7 +20,7 @@ describe("promiseAll", () => {
     expect(result).toEqual([300, 200, 100]);
   });
 
-  test("должна возвращать Promise<[]> на вызов с пустым массивом", async () => {
+  test("Должна возвращать Promise<[]> на вызов с пустым массивом", async () => {
     const result = await promiseAll([]);
     expect(result).toEqual([]);
   });

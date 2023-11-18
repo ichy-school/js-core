@@ -1,6 +1,6 @@
 const createUsernames = (data) => {
-  //Код пишем тут
+  // Пиши код здесь
 };
 
 export { createUsernames };
-//Для запуска теста вводим в терминале команду: npm run test:current -- problem1-4-2.test.js
+// Для запуска теста вводим в терминале команду: npm run test:current -- problem1-4-2.test.js

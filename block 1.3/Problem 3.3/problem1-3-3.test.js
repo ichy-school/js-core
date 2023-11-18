@@ -44,7 +44,7 @@ describe("optionalChaining", () => {
   };
   const originalObj = deepClone(obj); // Проверь @stanzzza
 
-  it("должна получать свойство по цепочке", () => {
+  it("Должна получать свойство по цепочке", () => {
     expect(optionalChaining(obj, ["a", "b", "c", "d"])).toBe("Привет!");
   });
 
@@ -53,14 +53,14 @@ describe("optionalChaining", () => {
     expect(obj).toEqual(originalObj);
   });
 
-  it("должна получать свойство любого уровня вложенности", () => {
+  it("Должна получать свойство любого уровня вложенности", () => {
     expect(optionalChaining(obj, ["a", "b", "c"])).toEqual({
       d: "Привет!",
       e: { f: expect.any(Function), g: [1, 2, 3] },
     });
   });
 
-  it("должна корректно возвращать объекты, функции и массивы", () => {
+  it("Должна корректно возвращать объекты, функции и массивы", () => {
     expect(optionalChaining(obj, ["a", "b", "c", "e"])).toEqual({
       f: expect.any(Function),
       g: [1, 2, 3],
@@ -69,13 +69,13 @@ describe("optionalChaining", () => {
     expect(optionalChaining(obj, ["a", "b", "c", "e", "g"])).toEqual([1, 2, 3]);
   });
 
-  it("должна возвращать undefined если свойства по указанному пути нет", () => {
+  it("Должна возвращать undefined если свойства по указанному пути нет", () => {
     expect(optionalChaining(obj, ["a", "b", "c", "d", "e"])).toBeUndefined();
     expect(optionalChaining(obj, ["a", "c", "d"])).toBeUndefined();
     expect(optionalChaining(obj, ["b", "d", "a"])).toBeUndefined();
   });
 
-  it("должна возвращать undefined на пустом массиве параметров", () => {
+  it("Должна возвращать undefined на пустом массиве параметров", () => {
     expect(optionalChaining(obj, [])).toBeUndefined();
   });
 });

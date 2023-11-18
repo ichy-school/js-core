@@ -1,8 +1,8 @@
 import * as problem2 from "./problem2";
 
 function getStringCount(object) {
-  //Код пишем тут
+  // Пиши код здесь
 }
 
 export { getStringCount };
-//Для запуска теста вводим в терминале команду: npm run test:current -- problem1-3-2.test.js
+// Для запуска теста вводим в терминале команду: npm run test:current -- problem1-3-2.test.js

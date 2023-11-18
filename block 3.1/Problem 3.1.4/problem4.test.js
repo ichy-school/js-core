@@ -1,7 +1,7 @@
 import { ExecutionError, applyFn } from "./problem4";
 
 describe("applyFn", () => {
-  test("должна возвращать в succeeded массив результатов", () => {
+  test("Должна возвращать в succeeded массив результатов", () => {
     const dataArr = [1, 2, 3];
     const callback = (arg) => arg + 1;
     const { succeeded, errors } = applyFn(dataArr, callback);
@@ -9,7 +9,7 @@ describe("applyFn", () => {
     expect(errors).toEqual([]);
   });
 
-  test("должна возвращать в errors массив ошибок с правильными данными вызова", () => {
+  test("Должна возвращать в errors массив ошибок с правильными данными вызова", () => {
     const dataArr = [1, "error", 3];
     const callback = (arg) => {
       if (arg === "error") {
@@ -24,7 +24,7 @@ describe("applyFn", () => {
     expect(errors[0].getArgData()).toBe("error");
   });
 
-  test("должна возвращать в errors массив ошибок с правильными call stacks", () => {
+  test("Должна возвращать в errors массив ошибок с правильными call stacks", () => {
     const dataArr = [1, "error", 3];
     const callback = (arg) => {
       if (arg === "error") {

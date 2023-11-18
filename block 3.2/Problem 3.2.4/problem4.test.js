@@ -1,7 +1,7 @@
 import { promiseRace } from "./problem4";
 
 describe("promiseRace", () => {
-  test("должна возвращать результат первого выполнившегося промиса", async () => {
+  test("Должна возвращать результат первого выполнившегося промиса", async () => {
     const firstPromise = new Promise((resolve) =>
       setTimeout(() => resolve(300), 300)
     );
@@ -17,7 +17,7 @@ describe("promiseRace", () => {
     ).resolves.toBe(100);
   });
 
-  test("должна прокидывать ошибку", async () => {
+  test("Должна прокидывать ошибку", async () => {
     const promise1 = Promise.resolve(200);
     const promise2 = Promise.reject(new Error("our test error"));
 

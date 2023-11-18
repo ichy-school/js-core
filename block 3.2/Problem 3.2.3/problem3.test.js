@@ -13,7 +13,7 @@ describe("increaseSalary", () => {
     expect(increaseSalary()).toBeInstanceOf(Promise);
   });
 
-  test("должна корректно увеличивать ЗП сотрудника с наименьшей ЗП", async () => {
+  test("Должна корректно увеличивать ЗП сотрудника с наименьшей ЗП", async () => {
     const minSalaryEmployee = api._employees.find(
       (e) => e.salary === Math.min(...api._employees.map((emp) => emp.salary))
     );
@@ -33,7 +33,7 @@ describe("increaseSalary", () => {
     );
   });
 
-  test("должна отправлять уведомление сотруднику", async () => {
+  test("Должна отправлять уведомление сотруднику", async () => {
     const spyNotifyEmployee = jest
       .spyOn(api, "notifyEmployee")
       .mockResolvedValue(true);

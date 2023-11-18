@@ -1,7 +1,7 @@
 import { calculatePrice } from "./problem1-4-3";
 
 describe("calculatePrice", () => {
-  it("должна подсчитывать стоимость", () => {
+  it("Должна подсчитывать стоимость", () => {
     const data = [
       { type: "food", price: 130 },
       { type: "clothes", price: 7300 },

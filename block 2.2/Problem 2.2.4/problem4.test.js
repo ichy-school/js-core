@@ -1,5 +1,5 @@
 describe("object-create", () => {
-  test("должен возвращать пустой объект при вызове с аргументом null", () => {
+  test("Должен возвращать пустой объект при вызове с аргументом null", () => {
     const obj = Object.create(null);
     expect(Object.getPrototypeOf(obj)).toBe(null);
     expect(Object.getOwnPropertyNames(obj).length).toBe(0);
