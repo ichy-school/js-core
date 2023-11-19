@@ -26,33 +26,43 @@ partition = (array, callback) => [trueArray, falseArray]
 ```javascript
 const numbers = [1,2,3,4,5,6];
 
-partition(numbers, (element) => element > 3);
-// => [ [4, 5, 6], // trueArray 
-//      [1, 2, 3]  // falseArray
-// ];
+partition(numbers, (element) => element > 3); /*
+[ 
+	[4, 5, 6], // trueArray
+	[1, 2, 3]  // falseArray
+];
+*/
 ```
 
 ```javascript
 const numbers = [0, 1, 2, {}, false, "", "0"];
 
-partition(numbers, (element) => element);
-// => [ [1, 2, {}, "0"], // trueArray 
-//      [0, false, ""]  // falseArray
-// ];
+partition(numbers, (element) => element); /*
+[ 
+	[1, 2, {}, "0"], // trueArray
+	[0, false, ""]  // falseArray
+]
+*/
 ```
 
 #### Посложнее
 
 ```javascript
 const users = [
-  { 'user': 'barney',  'age': 36, 'active': false },
-  { 'user': 'fred',    'age': 40, 'active': true },
-  { 'user': 'pebbles', 'age': 1,  'active': false }
+    { 'user': 'barney',  'age': 36, 'active': false },
+    { 'user': 'fred',    'age': 40, 'active': true },
+    { 'user': 'pebbles', 'age': 1,  'active': false }
 ];
- 
-partition(users, (element) => element.active );
-// => [ [ { 'user': 'fred',    'age': 40, 'active': true } ],
-//      [ { 'user': 'barney',  'age': 36, 'active': false },
-//        { 'user': 'pebbles', 'age': 1,  'active': false } ] 
-// ];
+
+partition(users, (element) => element.active ); /*
+[ 
+	[ 
+		{ 'user': 'fred',    'age': 40, 'active': true } 
+	], // trueArray
+  [ 
+		{ 'user': 'barney',  'age': 36, 'active': false },
+		{ 'user': 'pebbles', 'age': 1,  'active': false } 
+	] // falseArray
+];
+*/
 ```

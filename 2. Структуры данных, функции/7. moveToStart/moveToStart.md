@@ -9,5 +9,5 @@
 ### Примеры использования:
 
 ```javascript
-console.log(moveToStart([1, 2, 3, 4, 5], 3)); // [3, 4, 5, 1, 2]
-console.log(moveToStart([1, 2, 3, 4, 5], 10)); // [1, 2, 3, 4, 5]
+moveToStart([1, 2, 3, 4, 5], 3); // [3, 4, 5, 1, 2]
+moveToStart([1, 2, 3, 4, 5], 10); // [1, 2, 3, 4, 5]

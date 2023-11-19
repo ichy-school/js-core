@@ -35,28 +35,28 @@ describe("partition", () => {
     expect(mockCallback).toHaveBeenCalledTimes(numbers.length);
   });
 
-  it("вызов partition должен возвращать новый массив", () => {
+  it("Вызов partition должен возвращать новый массив", () => {
     const originalArray = [...numbers];
     const resultArray = partition(numbers, (element) => element > 3);
     expect(resultArray).not.toBe(numbers);
     expect(numbers).toEqual(originalArray);
   });
 
-  it("все значения в trueArray должны соответствовать условию callback", () => {
+  it("Все значения в trueArray должны соответствовать условию callback", () => {
     const trueArray = partition(numbers, (element) => element > 3)[0];
     trueArray.forEach((element) => {
       expect(element).toBeGreaterThan(3);
     });
   });
 
-  it("все значения в falseArray должны соответствовать условию callback", () => {
+  it("Все значения в falseArray должны соответствовать условию callback", () => {
     const falseArray = partition(numbers, (element) => element > 3)[1];
     falseArray.forEach((element) => {
       expect(element).not.toBeGreaterThan(3);
     });
   });
 
-  it("верно отрабатывает если callback не передан", () => {
+  it("Верно отрабатывает если callback не передан", () => {
     const result = partition([1, false, 2, 0, 3, ""]);
     expect(result).toEqual([
       [1, 2, 3],
@@ -64,7 +64,7 @@ describe("partition", () => {
     ]);
   });
 
-  it("не должна менять изначальный массив", () => {
+  it("Не должна менять изначальный массив", () => {
     const originalArray = [...numbers];
     partition(numbers, (element) => element > 3);
     expect(numbers).toEqual(originalArray);
