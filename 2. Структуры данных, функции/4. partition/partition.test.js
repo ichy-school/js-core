@@ -29,7 +29,7 @@ describe("partition", () => {
     expect(mockCallback).toHaveBeenNthCalledWith(2, 2);
   });
 
-  it("функция callback должна вызываться нужное количество раз", () => {
+  it("Функция callback должна вызываться нужное количество раз", () => {
     const mockCallback = jest.fn();
     partition(numbers, mockCallback);
     expect(mockCallback).toHaveBeenCalledTimes(numbers.length);

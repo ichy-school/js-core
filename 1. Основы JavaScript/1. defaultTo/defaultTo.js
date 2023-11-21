@@ -1,5 +1,5 @@
 const defaultTo = (value, defaultValue) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 module.exports = defaultTo;

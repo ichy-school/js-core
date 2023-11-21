@@ -1,5 +1,5 @@
 function findAllIndices(arr, value) {
-  // Пиши код здесь
+  // Пишите код здесь
 }
 
 export { findAllIndices };

@@ -1,5 +1,5 @@
 const calculatePrice = (orders) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 export { calculatePrice };

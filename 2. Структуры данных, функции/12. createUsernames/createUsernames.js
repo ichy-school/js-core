@@ -1,5 +1,5 @@
 const createUsernames = (data) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 export { createUsernames };

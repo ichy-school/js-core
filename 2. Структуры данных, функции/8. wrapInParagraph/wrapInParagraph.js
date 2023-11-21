@@ -1,5 +1,5 @@
 function wrapInParagraph(text) {
-  // Пиши код здесь
+  // Пишите код здесь
 }
 
 module.exports = wrapInParagraph;
