@@ -1,5 +1,5 @@
 const areBracketsBalanced = (str) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 export { areBracketsBalanced };

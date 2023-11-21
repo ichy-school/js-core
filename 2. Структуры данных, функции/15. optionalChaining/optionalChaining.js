@@ -1,5 +1,5 @@
 function optionalChaining(obj, chain) {
-  // Пиши код здесь
+  // Пишите код здесь
 }
 
 export { optionalChaining };

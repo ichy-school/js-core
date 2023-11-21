@@ -1,5 +1,5 @@
 function compareWithPrecision(a, b, precision) {
-  // Пиши код здесь
+  // Пишите код здесь
 }
 
 module.exports = compareWithPrecision;

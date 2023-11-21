@@ -1,5 +1,5 @@
 const getField = (data, field) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 export { getField };

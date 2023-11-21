@@ -1,13 +1,13 @@
 const inRange = (a, b) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 const inArray = (arr) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 const notInArray = (arr) => {
-  // Пиши код здесь
+  // Пишите код здесь
 };
 
 export { inArray, inRange, notInArray };

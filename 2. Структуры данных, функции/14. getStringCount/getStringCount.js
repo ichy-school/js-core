@@ -1,5 +1,5 @@
 function getStringCount(object) {
-  // Пиши код здесь
+  // Пишите код здесь
 }
 
 export { getStringCount };

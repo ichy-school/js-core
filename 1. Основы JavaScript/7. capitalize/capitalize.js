@@ -1,5 +1,5 @@
 function capitalize(str) {
-  // Пиши код здесь
+  // Пишите код здесь
 }
 
 module.exports = capitalize;
