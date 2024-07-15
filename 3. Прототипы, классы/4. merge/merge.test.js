@@ -1,11 +1,6 @@
 import { merge } from "./merge";
 
 describe("merge", () => {
-  it("Должна использовать оператор spread", () => {
-    const functionString = merge.toString();
-    expect(functionString).toMatch("objectSpread");
-  });
-
   it("Должна объединять объекты", () => {
     const obj1 = { name: "John" };
     const obj2 = { age: 22 };

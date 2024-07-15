@@ -29,19 +29,23 @@ describe("isEmptyWithProtos", () => {
     expect(isEmptyWithProtos(obj)).toBe(true);
   });
 
-  it("Должна возвращать false на объект с прототипом со свойствами", () => {
-    const protoObj = { someProp: "someValue" };
+  it("Должна возвращать false на пустой объект с прототипом со свойствами", () => {
+    const protoObj = Object.create(null);
+    protoObj.toString = () => {};
     const obj = Object.create(protoObj);
     expect(isEmptyWithProtos(obj)).toBe(false);
   });
 
-  it("Должна возвращать false на непустой объект", () => {
-    const obj = { prop: "value" };
+  it("Должна возвращать false на непустой объект без прототипа", () => {
+    const obj = Object.create(null);
+    obj.prop = 'value';
     expect(isEmptyWithProtos(obj)).toBe(false);
   });
 
-  it("Должна возвращать false на пустой объект с прототипом", () => {
-    const obj = {};
+  it("Должна возвращать false на непустой объект с прототипом со свойствами", () => {
+    const protoObj = { someProp: "someValue" };
+    const obj = Object.create(protoObj);
+    obj.prop = 'value';
     expect(isEmptyWithProtos(obj)).toBe(false);
   });
 });

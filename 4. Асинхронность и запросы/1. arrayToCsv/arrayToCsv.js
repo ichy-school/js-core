@@ -3,4 +3,4 @@ function arrayToCsv(data) {
 }
 
 export { arrayToCsv };
-// Для запуска теста вводим в терминале команду: npm run test:current -- csvGenerator.test.js
+// Для запуска теста вводим в терминале команду: npm run test:current -- arrayToCsv.test.js

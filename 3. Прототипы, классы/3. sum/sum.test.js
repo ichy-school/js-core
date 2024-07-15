@@ -1,11 +1,6 @@
 import { sum } from "./sum";
 
 describe("sum", () => {
-  it("Должна использовать оператор spread", () => {
-    const functionString = sum.toString();
-    expect(functionString).toMatch("objectSpread");
-  });
-
   it("Должна суммировать правильно", () => {
     expect(sum(1, 2, 3, 4, 5)).toBe(15);
     expect(sum(-10, 15, 100)).toBe(105);

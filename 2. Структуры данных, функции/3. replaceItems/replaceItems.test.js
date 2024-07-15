@@ -23,7 +23,7 @@ describe("replaceItemsMutate", () => {
   it("Должна мутировать входящий массив", () => {
     const sourceArr = [1, 4, 3, 4, 5];
     const check = sourceArr.slice();
-    const result = replaceItemsClear(sourceArr, 4, "replaced");
+    const result = replaceItemsMutate(sourceArr, 4, "replaced");
     expect(result).toEqual([1, "replaced", 3, "replaced", 5]);
     expect(result).toBe(sourceArr);
     expect(sourceArr).not.toEqual(check);
