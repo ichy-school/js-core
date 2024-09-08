@@ -31,6 +31,7 @@ describe("incrementCounter", () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+    localStorageMock.clear();
   });
 
   it("Счетчик увеличивается при валидном localStorage с единственным значением", () => {
@@ -59,6 +60,15 @@ describe("incrementCounter", () => {
     expect(setItemSpy).toHaveBeenCalledWith(
       "counters",
       JSON.stringify({ invalidCounter: 1 })
+    );
+  });
+
+  it("Счетчик устанавливается при отсутствующем ключе в localStorage", () => {
+    getItemSpy.mockReturnValue(null);
+    expect(incrementCounter("invalidCounter2")).toBe(1);
+    expect(setItemSpy).toHaveBeenCalledWith(
+        "counters",
+        JSON.stringify({ invalidCounter2: 1 })
     );
   });
 });
